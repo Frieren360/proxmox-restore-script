@@ -3,7 +3,7 @@ This script automatically rollbacks proxmox containers and virtual machines to u
 
 ## Setup
 
-Each remote node is expected to have a file in /usr/local/bin/proxmox-restore.sh without the ssh logic. This is so that the master vnode that the main script is being run from, can remotely run the script on each node without entering a massive loop.
+Each remote node is expected to have a file in /usr/local/bin/proxmox-restore.sh without the ssh logic (this is the proxmox-remote-restore.sh file). This is so that the master vnode that the main script is being run from, can remotely run the script on each node without entering a massive loop.
 
 ## Examples
 
