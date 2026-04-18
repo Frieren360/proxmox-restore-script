@@ -1,6 +1,8 @@
 # proxmox-restore-script
 This script automatically rollbacks proxmox containers and virtual machines to user-defined snapshots. It utilizes basic Unix utilities such as grep, awk, and tail to form the list of VMIDs for both containers and QEMU virtual machines. Then it recursively performs either the `qm` or `pct` command to shutdown then perform the restore.
 
+It uses SSH to run the script on remote nodes.
+
 ## Setup
 
 Each remote node is expected to have a file in /usr/local/bin/proxmox-restore.sh without the ssh logic (this is the proxmox-remote-restore.sh file). This is so that the master vnode that the main script is being run from, can remotely run the script on each node without entering a massive loop.
