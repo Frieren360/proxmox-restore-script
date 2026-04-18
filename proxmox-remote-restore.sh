@@ -27,7 +27,7 @@ reset_guests() {
 
         # Rollback logic 
         success=false 
-        targets=(lamp base) 
+        targets=(base) 
 
         for target in "${targets[@]}"; do 
                 echo "Trying rollback to $target..." 
@@ -46,7 +46,7 @@ reset_guests() {
     done 
 } 
 
-DEFAULT_ARGUMENTS=(ubu ubudesk cyberlab cyb-) 
+DEFAULT_ARGUMENTS=(ubu ubudesk) 
 
 # set default if no args 
 if [ "$#" -eq 0 ]; then 
